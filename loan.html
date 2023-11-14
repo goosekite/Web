@@ -1,0 +1,76 @@
+<html>
+<head>
+    <title>Bank - My Loan</title>
+    <link href="13.css" rel="stylesheet" type="text/css" />
+</head>
+
+<body>
+    <div style="width: 100%;">
+        
+        <!-- not sure how to center this text -->
+        <div style="width: 100%;"><h1 style="text-align: center;">My Loans</h1></div>
+
+        <div style="width: 20%; height: 200px; float: left;">
+            <h1>Main Menu</h1>
+            <ul type="disc">
+                <li><a href="main.html">My Account</a></li>
+                <li><a href="loan.html">My Loans</a></li>
+                <li><a href="creditcard.html">My Credit Cards</a></li>
+                <li><a href="payment.html">My Payments</a></li>
+            </ul>
+        
+        </div>    
+
+    <h1>Apply Loans</h1>
+    
+    <table>
+        <form>
+            <tr>
+                <td>LoanID</td>
+                <td><input type="text" name="LoanID" readonly/></td>
+            </tr>
+                        
+            
+            <tr>
+            <td>Loan Type</td>
+                <td><select name="loanType">
+                        <option value="Personal">Personal</option>
+                        <option value="Car">Car</option>
+                        <option value="House">House</option>
+                    </select>
+            </td>
+            </tr>
+
+            <tr>
+                <td>Loan Amount</td>
+                <td>
+                    <input type="number" min="100" maxlength="12">
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td style="left: 50%;"><input type="reset" value="Reset"> 
+                
+                <!-- Should trigger a alert asking confirm to submit loan -->
+                <input type="submit" value="Request Loan"></td>
+            </tr>
+
+
+            
+
+
+        </form>
+    </table>
+
+    <hr>
+    <h1>My Existing Loans</h1>
+    
+
+
+
+    
+    
+</body>
+
+</html>

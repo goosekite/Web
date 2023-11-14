@@ -1,0 +1,97 @@
+<html>
+<head>
+    <title>Bank - My Payment</title>
+    <script type="text/javascript">
+        function userCommits() 
+        {
+            
+            var x = document.forms["form1"];
+            var text = "";
+            
+            for (var i = 0; i < x.length - 2; i++)
+            {
+                text += x.elements[i].value + " ";
+            }
+            document.getElementById("demo").innerHTML = text;
+        }
+
+        function todayDate(){
+            const date = new Date;
+            document.getElementById("todaydate").innerHTML = date.toLocaleString();
+            console.log(date);
+        }
+    </script>
+</head>
+
+<body>
+    <div style="width: 100%;">
+        
+        <!-- not sure how to center this text -->
+        <div style="width: 100%;"><h1 style="text-align: center;">My Payment</h1></div>
+
+        <div style="width: 20%; height: 200px; float: left;">
+            <h1>Main Menu</h1>
+            <ul type="disc">
+                <li><a href="main.html">My Account</a></li>
+                <li><a href="loan.html">My Loans</a></li>
+                <li><a href="creditcard.html">My Credit Cards</a></li>
+                <li><a href="payment.html">My Payments</a></li>
+            </ul>
+        
+        </div>    
+
+    <h1>Payment</h1>
+    
+    
+    <table>
+        <form id="form1" action="">
+            <tr>
+                <td>My ID</td>
+                <td><input type="text"  name="custID1" readonly value="001" style="width: 100px; background-color: #dddddd;"/></td>
+            </tr>
+                        
+            
+            <tr>
+            <!-- <td>Handphone</td>
+                <td>
+                    <input type="text" required="required" name="Handphone" maxlength="8" pattern="[8-9]{1}[0-9]{7}" title="Please enter a valid Phone Number" >
+                </td>
+            </tr> -->
+
+            <tr>
+                <td>Transfer to Account:</td>
+                <td>
+                    <input type="text" style="width: 100px;" required="required" name="custID2" placeholder="002" />
+                </td>
+            </tr>
+
+            <tr>
+                <td>Transfer Amount</td>
+                <td>
+                    <input type="number" style="width: 100px;" name="Amount" min="20" max="99999" placeholder="20" maxlength="6" pattern="[0-9]{5}" title="Please enter a number between $20 & $100,000"/></td>
+                </td>
+            </tr>
+            
+            
+            <tr>
+                <td style="left: 50%;"><input type="reset" value="Reset"> 
+                
+                <input type="submit" onclick="userCommits()" value="Transfer Now"></td>
+            </tr>
+
+
+            
+
+
+        </form>
+        
+    </table>
+
+    <hr>
+    <p id="demo"></p>
+    <p id="p"></p>
+    
+
+</body>
+
+</html>
